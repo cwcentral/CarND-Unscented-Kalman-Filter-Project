@@ -49,3 +49,9 @@ Please see the UKF class with appropriate Update methods.
 
 We followed closely the example put forth in the classwork as well as leverage Eigen::MatrixXd and Eigen::VectorXd matrix operators to reduce complexity. It maybe optional to convert the rotation normalization steps from WHILE loops to IF-ELSE blocks.
 
+## Bonus
+
+I played a few times with the bonus simulator and found I need quite a bit of noise to be added to catch the car: like 20% of the default values provided by the lesson. In the end, I was able to catch the car a few times. Still, more work needs to be done.
+
+<img src="output/bonus.png" width="480" alt="NIS Radar" />
+
