@@ -100,6 +100,11 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 	 Complete this function! Make sure you switch between lidar and radar
 	 measurements.
 	 */
+
+	//
+	// We follow the lesson material and fill out necessary datasets
+	//
+
 	if (!is_initialized_) {
 		cout << "Initializing UKF." << endl;
 
@@ -187,6 +192,12 @@ void UKF::Prediction(double delta_t) {
 	 Complete this function! Estimate the object's location. Modify the state
 	 vector, x_. Predict sigma points, the state, and the state covariance matrix.
 	 */
+
+	//
+	// We follow the lesson material and pipeline. I call out specific lessons
+	// were we used code as explained in the lesson material such tha one can refer back to
+	// the lesson to see pretty much the same code.
+	//
 
 	/////////////////////////////////////////////////////////////////////////////
 	// See Lesson 13
@@ -343,6 +354,12 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
 	 */
 
 	//
+	// We follow the lesson material and pipeline. I call out specific lessons
+	// were we used code as explained in the lesson material such tha one can refer back to
+	// the lesson to see pretty much the same code.
+	//
+
+	//
 	int n_z = 2;  // LASER IS XY, aka 2D
 
 	// Setup values to get prediction
@@ -456,6 +473,13 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
 
 	 You'll also need to calculate the radar NIS.
 	 */
+
+	//
+	// We follow the lesson material and pipeline. I call out specific lessons
+	// were we used code as explained in the lesson material such tha one can refer back to
+	// the lesson to see pretty much the same code.
+	//
+
 	int n_z = 3;  // LASER IS XY
 	MatrixXd Zsig = MatrixXd(n_z, 2 * n_aug_ + 1);
 	VectorXd z_pred = VectorXd(n_z);
